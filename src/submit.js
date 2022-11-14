@@ -1,5 +1,5 @@
 // Project constructor
-const Project = (name, date = "", description, urgency, list = []) => {
+const Project = (name, date, description, urgency, list = []) => {
   return { name, date, description, urgency, list };
 };
 
@@ -11,9 +11,11 @@ const Submit = () => {
   const body = document.querySelector("body");
   const form = document.querySelector("form");
 
-  console.log("Clicked!");
-  body.removeChild(form);
-  console.log(Project(fname, date, descript, pri));
+  if (fname != "" && date != "") {
+    console.log("Clicked!");
+    body.removeChild(form);
+    console.log(Project(fname, date, descript, pri));
+  }
 };
 
 export { Submit };

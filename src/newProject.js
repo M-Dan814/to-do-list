@@ -14,6 +14,7 @@ const NewProj = () => {
   FN.id = "fn";
   FN.setAttribute("name", "FullName");
   FN.setAttribute("placeholder", "Project Name");
+  FN.required = true;
 
   // Description
   const DE_label = document.createElement("label");
@@ -34,8 +35,9 @@ const NewProj = () => {
   date_label.setAttribute("for", "date");
 
   var date = document.createElement("input");
-  date.setAttribute("type", "date")
+  date.setAttribute("type", "date");
   date.id = "date";
+  date.required = true;
 
   // Priority
   const Prio_label = document.createElement("label");
@@ -44,6 +46,7 @@ const NewProj = () => {
 
   var Prio = document.createElement("select");
   Prio.id = "priority";
+  Prio.required = true;
 
   const Option1 = document.createElement("option");
   const optionText1 = document.createTextNode("Low");
@@ -69,8 +72,8 @@ const NewProj = () => {
 
   // create a submit button
   var s = document.createElement("button");
-  s.textContent = "Create"
-  s.addEventListener("click", Submit)
+  s.textContent = "Create";
+  s.addEventListener("click", Submit);
 
   form.appendChild(FN_label);
   form.appendChild(FN);
