@@ -89,7 +89,7 @@ const NewProj = () => {
   form.appendChild(br.cloneNode());
   form.appendChild(s);
 
-  document.getElementsByTagName("body")[0].appendChild(form);
+  document.querySelector(".form").appendChild(form);
 };
 
 export { NewProj };
