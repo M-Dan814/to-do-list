@@ -9,11 +9,18 @@ const newToDo = (arr, number) => {
   const name = document.createElement("input");
   const add = document.createElement("button");
   add.textContent = "Add";
-  form.append(question, name, add);
+  const cancel = document.createElement("button");
+  cancel.textContent = "Cancel";
+  cancel.classList.add("cancel");
+  form.append(question, name, add, cancel);
   current.append(form);
   add.addEventListener("click", () => {
     arr.push(name.value);
     DOM();
+  });
+
+  cancel.addEventListener("click", () => {
+    DOM();  
   });
 };
 
