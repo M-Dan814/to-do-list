@@ -1,5 +1,6 @@
 import { projects } from "./submit";
 import { newToDo } from "./newToDo";
+import { editToDo } from "./editToDo";
 
 const DOM = () => {
   const div = document.querySelector("#content");
@@ -41,14 +42,30 @@ const DOM = () => {
     add_todos.addEventListener("click", () => newToDo(project.todos, i));
     todo_cont.appendChild(add_todos);
     if (project.todos.length == 0) {
-      todo_cont.textContent =
-        "It seems that you do not have any thing to do regarding this project...";
+      todo_cont.textContent = "No todos lined up for this project...";
       todo_cont.appendChild(add_todos);
     }
     for (let j = 0; j < project.todos.length; j++) {
       const todo = document.createElement("div");
       todo.classList.add("todo");
       todo.textContent = `${project.todos[j]}`;
+
+      const edit = document.createElement("button");
+      edit.textContent = "Edit";
+      edit.classList.add("edit");
+      edit.setAttribute("number", j);
+
+      const del = document.createElement("button");
+      del.textContent = "Delete";
+      del.classList.add("delete");
+      del.setAttribute("num", j);
+
+      del.addEventListener("click", () => {
+        project.todos.splice(del.getAttribute("num"), 1);
+        DOM();
+      });
+
+      todo.append(edit, del);
       todo_cont.appendChild(todo);
     }
     card.append(cont1, cont2, cont3, todo_cont);
