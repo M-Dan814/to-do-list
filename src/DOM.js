@@ -55,6 +55,10 @@ const DOM = () => {
       edit.classList.add("edit");
       edit.setAttribute("number", j);
 
+      edit.addEventListener("click", () => {
+        todo_cont.append(editToDo(j, project.todos));
+      });
+
       const del = document.createElement("button");
       del.textContent = "Delete";
       del.classList.add("delete");
