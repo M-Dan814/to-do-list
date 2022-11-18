@@ -72,7 +72,16 @@ const DOM = () => {
       todo.append(edit, del);
       todo_cont.appendChild(todo);
     }
-    card.append(cont1, cont2, cont3, todo_cont);
+
+    const del_project = document.createElement("span");
+    del_project.textContent = "Delete Project";
+    del_project.setAttribute("num", i);
+    del_project.classList.add("delete");
+    del_project.addEventListener("click", () => {
+      projects().splice(i, 1);
+      DOM();
+    });
+    card.append(cont1, cont2, cont3, todo_cont, del_project);
     div.append(card);
   }
 };

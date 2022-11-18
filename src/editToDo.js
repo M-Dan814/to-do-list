@@ -3,6 +3,7 @@ import { DOM } from "./DOM";
 const editToDo = (num, arr) => {
   const form = document.createElement("div");
   const name = document.createElement("input");
+  name.required = true;
   const confirm = document.createElement("button");
   confirm.textContent = "Confirm";
   const cancel = document.createElement("button");
