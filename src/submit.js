@@ -16,7 +16,7 @@ const Submit = () => {
     new Date(document.querySelector("#date").value),
     "yyyy-MM-dd"
   );
-  const body = document.querySelector(".form");
+  const body = document.querySelector("#proj-form");
   const form = document.querySelector("form");
 
   if (fname != "" && date != "") {

@@ -15,4 +15,8 @@ module.exports = {
       },
     ],
   },
+  performance: {
+    maxAssetSize: 500000,
+    maxEntrypointSize: 500000,
+  },
 };
