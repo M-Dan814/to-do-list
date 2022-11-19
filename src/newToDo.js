@@ -13,17 +13,20 @@ const newToDo = (arr, number) => {
 
   const add = document.createElement("button");
   add.textContent = "Add";
+  add.classList.add("add");
 
   const cancel = document.createElement("button");
   cancel.textContent = "Cancel";
-  cancel.classList.add("cancel");
+  cancel.classList.add("delete");
 
   form.append(question, name, add, cancel);
   current.append(form);
 
   add.addEventListener("click", () => {
-    arr.push(name.value);
-    DOM();
+    if (name.value != "") {
+      arr.push(name.value);
+      DOM();
+    }
   });
 
   cancel.addEventListener("click", () => {

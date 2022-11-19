@@ -6,9 +6,11 @@ const editToDo = (num, arr) => {
   name.required = true;
   const confirm = document.createElement("button");
   confirm.textContent = "Confirm";
+  confirm.classList.add("edit");
+
   const cancel = document.createElement("button");
   cancel.textContent = "Cancel";
-  cancel.classList.add("cancel");
+  cancel.classList.add("delete");
   form.append(name, confirm, cancel);
   confirm.addEventListener("click", () => {
     arr.splice(num, 1, name.value);

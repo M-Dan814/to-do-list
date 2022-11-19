@@ -1,0 +1,189 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(235, 242, 255);
+}
+
+#new-project {
+  padding: 12px;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  background-color: blue;
+}
+
+#new-project:hover {
+  cursor: pointer;
+  background-color: rgb(166, 229, 240);
+  color: blue;
+}
+
+.form {
+  background-color: rgb(60, 73, 69);
+  color: rgb(228, 228, 228);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-sizing: border-box;
+  padding: 8px;
+  box-shadow: 0 3px rgb(185, 185, 185);
+}
+
+.form > input {
+  width: 20%;
+}
+
+input {
+  background-color: rgb(227, 227, 241);
+  padding: 7px;
+  border-radius: 3px;
+  border: 0;
+}
+
+input:active {
+  background-color: rgb(159, 193, 255);
+  border: 0;
+}
+
+input:focus{
+  background-color: rgb(191, 214, 255);
+  border: 0;
+}
+
+.form > select {
+  width: 20%;
+}
+
+
+select {
+  padding: 5px;
+  background-color: rgb(227, 227, 241);
+}
+
+select:focus {
+  background-color: rgb(191, 214, 255);
+}
+
+.submit {
+  padding: 8px;
+  background-color: blue;
+  color: white;
+  border: 0;
+  border-radius: 3px;
+}
+
+.submit:hover {
+  border: 0;
+  color: blue;
+  background-color: rgb(166, 229, 240);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.delete {
+  background-color: red;
+  padding: 8px;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+}
+
+.delete:hover {
+  border: 0;
+  background-color: white;
+  color: red;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+#content {
+  padding: 4px;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto-fill, 400px);
+}
+
+.card {
+  box-shadow: 3px 3px 2px rgb(185, 185, 185);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.urgent {
+  background-color: rgb(255, 183, 183);
+}
+
+.med {
+  background-color: rgb(217, 243, 179);
+}
+
+.low {
+  background-color: rgb(162, 162, 250);
+}
+
+.card > .delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.todos {
+  background-color: rgb(206, 223, 255);
+  overflow-y: scroll;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  height: 100%;
+}
+
+.add {
+  background-color: rgb(132, 179, 62);
+  color: white;
+  border: 0;
+  padding: 8px;
+  border-radius: 3px;
+}
+
+.add:hover {
+  background-color: white;
+  color: rgb(132, 179, 62);
+  cursor: pointer;
+}
+
+.todo {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.edit {
+  padding: 8px;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  background-color: blue;
+}
+
+.edit:hover {
+  cursor: pointer;
+  background-color: rgb(205, 248, 255);
+  color: blue;
+}
+
+.header {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.description {
+  font-style: italic;
+}

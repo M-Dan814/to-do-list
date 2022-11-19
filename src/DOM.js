@@ -18,9 +18,8 @@ const DOM = () => {
     }
 
     const cont1 = document.createElement("div");
-    const name = document.createElement("h1");
-    name.textContent = `${project.name}`;
-    cont1.append(name);
+    cont1.classList.add("header")
+    cont1.textContent = `${project.name}`;
 
     const cont2 = document.createElement("div");
     const des = document.createElement("span");
@@ -37,6 +36,7 @@ const DOM = () => {
     const todo_cont = document.createElement("div");
     todo_cont.classList.add("todos");
     const add_todos = document.createElement("button");
+    add_todos.classList.add("add")
     add_todos.textContent = "Add Todo";
     add_todos.setAttribute("count", i);
     add_todos.addEventListener("click", () => newToDo(project.todos, i));
